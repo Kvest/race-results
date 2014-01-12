@@ -14,10 +14,10 @@ public class ResultsTable implements BaseColumns {
     public static final String TABLE_NAME = "results";
 
     public static final String NAME_COLUMN = "name";
-    public static final String TIME_COLUMN = "time";
+    public static final String TIME_COLUMN = "time_result";
     public static final String AGE_COLUMN = "age";
     public static final String RANKING_COLUMN = "ranking";
-    public static final String GROUP_COLUMN = "group";
+    public static final String GROUP_COLUMN = "age_group";
 
     public static final String[] FULL_PROJECTION = {_ID, NAME_COLUMN, TIME_COLUMN, AGE_COLUMN,
                                                     RANKING_COLUMN, GROUP_COLUMN};
@@ -40,14 +40,14 @@ public class ResultsTable implements BaseColumns {
             "\"), 0) WHERE \"" + _ID + "\" = NEW.\"" + _ID + "\";" +
             " UPDATE \"" + TABLE_NAME + "\" SET \"" + RANKING_COLUMN +
             "\"=\"" + RANKING_COLUMN + "\" + 1 WHERE \"" + TIME_COLUMN +
-            "\" > NEW.\"" + TIME_COLUMN +"\" AND \"" + GROUP_COLUMN + "\" =  NEW.\"" + GROUP_COLUMN + "\"" +
+            "\" > NEW.\"" + TIME_COLUMN +"\" AND \"" + GROUP_COLUMN + "\" =  NEW.\"" + GROUP_COLUMN + "\";" +
             " END;";
     public static final String CREATE_AFTER_DELETE_TRIGGER_SQL = "CREATE TRIGGER IF NOT EXISTS \"after_result_delete\"" +
             " AFTER DELETE ON \"" + TABLE_NAME + "\" " +
             "BEGIN " +
             " UPDATE \"" + TABLE_NAME + "\" SET \"" + RANKING_COLUMN +
             "\"=\"" + RANKING_COLUMN + "\" - 1 WHERE \"" + TIME_COLUMN +
-            "\" > OLD.\"" + TIME_COLUMN +"\" AND \"" + GROUP_COLUMN + "\" =  OLD.\"" + GROUP_COLUMN + "\"" +
+            "\" > OLD.\"" + TIME_COLUMN +"\" AND \"" + GROUP_COLUMN + "\" =  OLD.\"" + GROUP_COLUMN + "\";" +
             " END;";
     public static final String DROP_TABLE_SQL = "DROP TABLE IF EXISTS \"" + TABLE_NAME + "\";";
 
