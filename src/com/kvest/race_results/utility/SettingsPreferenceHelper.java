@@ -2,6 +2,7 @@ package com.kvest.race_results.utility;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import com.kvest.race_results.network.NetworkRequestHelper;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,11 +14,7 @@ import android.content.SharedPreferences;
 public abstract class SettingsPreferenceHelper {
     private static final String SHARED_PREFERENCES_NAME = "com.kvest.race_results.utility.SETTINGS";
     private static final String LOAD_FORMAT_KEY = "load_format";
-
-    public static final int LOAD_FORMAT_JSON = 0;
-    public static final int LOAD_FORMAT_XML= 1;
-    public static final int LOAD_FORMAT_TXT = 2;
-    private static final int DEFAULT_LOAD_FORMAT = LOAD_FORMAT_JSON;
+    private static final int DEFAULT_LOAD_FORMAT = NetworkRequestHelper.LOAD_FORMAT_JSON;
 
     public static void setLoadFormat(Context context, int value) {
         SharedPreferences.Editor editor = context.getSharedPreferences(SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE).edit();

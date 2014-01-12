@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.RadioGroup;
 import com.kvest.race_results.R;
+import com.kvest.race_results.network.NetworkRequestHelper;
 import com.kvest.race_results.utility.SettingsPreferenceHelper;
 
 /**
@@ -26,13 +27,13 @@ public class SettingsActivity extends ActionBarActivity {
         //format of the data loading
         RadioGroup loadingFormatGroup = ((RadioGroup)findViewById(R.id.loading_format));
         switch (SettingsPreferenceHelper.getLoadFormat(this)) {
-            case SettingsPreferenceHelper.LOAD_FORMAT_JSON :
+            case NetworkRequestHelper.LOAD_FORMAT_JSON :
                 loadingFormatGroup.check(R.id.json_format);
                 break;
-            case SettingsPreferenceHelper.LOAD_FORMAT_XML :
+            case NetworkRequestHelper.LOAD_FORMAT_XML :
                 loadingFormatGroup.check(R.id.xml_format);
                 break;
-            case SettingsPreferenceHelper.LOAD_FORMAT_TXT :
+            case NetworkRequestHelper.LOAD_FORMAT_TXT :
                 loadingFormatGroup.check(R.id.txt_format);
                 break;
         }
@@ -42,13 +43,13 @@ public class SettingsActivity extends ActionBarActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId) {
                     case R.id.json_format :
-                        SettingsPreferenceHelper.setLoadFormat(SettingsActivity.this, SettingsPreferenceHelper.LOAD_FORMAT_JSON);
+                        SettingsPreferenceHelper.setLoadFormat(SettingsActivity.this, NetworkRequestHelper.LOAD_FORMAT_JSON);
                         break;
                     case R.id.xml_format :
-                        SettingsPreferenceHelper.setLoadFormat(SettingsActivity.this, SettingsPreferenceHelper.LOAD_FORMAT_XML);
+                        SettingsPreferenceHelper.setLoadFormat(SettingsActivity.this, NetworkRequestHelper.LOAD_FORMAT_XML);
                         break;
                     case R.id.txt_format :
-                        SettingsPreferenceHelper.setLoadFormat(SettingsActivity.this, SettingsPreferenceHelper.LOAD_FORMAT_TXT);
+                        SettingsPreferenceHelper.setLoadFormat(SettingsActivity.this, NetworkRequestHelper.LOAD_FORMAT_TXT);
                         break;
                 }
             }

@@ -7,7 +7,7 @@ package com.kvest.race_results.utility;
  * Time: 10:14
  * To change this template use File | Settings | File Templates.
  */
-public abstract class GroupHelper {
+public abstract class AgeGroupHelper {
     public static final int FIRST_GROUP = 0;
     public static final int SECOND_GROUP = 1;
     public static final int THIRD_GROUP = 2;

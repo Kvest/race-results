@@ -4,9 +4,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.view.View;
-import android.widget.TextView;
 import com.kvest.race_results.R;
-import com.kvest.race_results.utility.GroupHelper;
+import com.kvest.race_results.utility.AgeGroupHelper;
 
 /**
  * Created with IntelliJ IDEA.
@@ -32,13 +31,13 @@ public class ResultsListAdapter extends SimpleCursorAdapter implements SimpleCur
     public boolean setViewValue(View view, Cursor cursor, int columnIndex) {
         if (view.getId() == R.id.root_container) {
             switch (cursor.getInt(columnIndex)) {
-                case GroupHelper.FIRST_GROUP :
+                case AgeGroupHelper.FIRST_GROUP :
                     view.setBackgroundResource(R.color.first_group_bg_color);
                     break;
-                case GroupHelper.SECOND_GROUP :
+                case AgeGroupHelper.SECOND_GROUP :
                     view.setBackgroundResource(R.color.second_group_bg_color);
                     break;
-                case GroupHelper.THIRD_GROUP :
+                case AgeGroupHelper.THIRD_GROUP :
                     view.setBackgroundResource(R.color.third_group_bg_color);
                     break;
             }

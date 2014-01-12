@@ -11,4 +11,6 @@
     <string name="json_format">JSON</string>
     <string name="xml_format">XML</string>
     <string name="txt_format">TXT</string>
+    <string name="error_loading_results">Error occurred while loading results from server</string>
+    <string name="error_parsing_results">Error occurred while parsing results</string>
 </resources>
