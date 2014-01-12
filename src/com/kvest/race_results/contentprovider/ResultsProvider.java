@@ -65,9 +65,6 @@ public class ResultsProvider extends ContentProvider {
         return cursor;
     }
 
-    Иконка
-    Подсвечивать цветом группы
-
     @Override
     public Uri insert(Uri uri, ContentValues values) {
         SQLiteDatabase db = sqlStorage.getWritableDatabase();
