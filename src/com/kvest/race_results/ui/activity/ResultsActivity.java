@@ -1,5 +1,6 @@
 package com.kvest.race_results.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
@@ -51,6 +52,7 @@ public class ResultsActivity extends ActionBarActivity {
     }
 
     private void showSettings() {
-        //TODO
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
     }
 }

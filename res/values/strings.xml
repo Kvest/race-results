@@ -7,4 +7,8 @@
     <string name="time">Time</string>
     <string name="age">Age</string>
     <string name="ranking">Ranking</string>
+    <string name="loading_data_format">Format of the data loading:</string>
+    <string name="json_format">JSON</string>
+    <string name="xml_format">XML</string>
+    <string name="txt_format">TXT</string>
 </resources>

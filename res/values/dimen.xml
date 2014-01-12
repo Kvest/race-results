@@ -3,4 +3,5 @@
     <dimen name="result_list_item_padding">4dip</dimen>
     <dimen name="result_list_margin">4dip</dimen>
     <dimen name="result_list_textsize">16sp</dimen>
+    <dimen name="settings_margin">4dip</dimen>
 </resources>

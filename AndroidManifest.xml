@@ -10,13 +10,17 @@
         android:theme="@style/com.kvest.race_results.AppTheme"
         android:label="@string/app_name"
         android:icon="@drawable/ic_launcher">
-        <activity android:name=".ui.activity.ResultsActivity"
-                  android:label="@string/app_name">
+        <activity
+            android:name=".ui.activity.ResultsActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.activity.SettingsActivity"
+            android:label="@string/settings" />
         <provider
             android:name=".contentprovider.ResultsProvider"
             android:authorities="com.kvest.race_results.contentprovider.ResultsProvider"
