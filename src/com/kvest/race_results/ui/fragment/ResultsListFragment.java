@@ -8,7 +8,9 @@ import android.support.v4.app.ListFragment;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import com.kvest.race_results.R;
 import com.kvest.race_results.contentprovider.ResultsProviderMetadata;
 import com.kvest.race_results.datastorage.table.ResultsTable;
@@ -34,6 +36,11 @@ public class ResultsListFragment extends ListFragment implements LoaderManager.L
         //don't show click on items
         getListView().setSelector(new ColorDrawable(Color.TRANSPARENT));
         getListView().setCacheColorHint(Color.TRANSPARENT);
+
+        //add header
+        LayoutInflater inflater = LayoutInflater.from(getActivity());
+        View header = inflater.inflate(R.layout.results_list_header, null);
+        getListView().addHeaderView(header);
 
         //create and set adapter
         String[] from = {ResultsTable.GROUP_COLUMN, ResultsTable.NAME_COLUMN, ResultsTable.TIME_COLUMN,

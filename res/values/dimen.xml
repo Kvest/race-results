@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="result_list_item_padding">4dip</dimen>
+    <dimen name="result_list_margin">4dip</dimen>
+    <dimen name="result_list_textsize">16sp</dimen>
 </resources>

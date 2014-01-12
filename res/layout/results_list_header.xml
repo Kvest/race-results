@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/root_container"
     android:orientation="horizontal"
@@ -11,23 +12,31 @@
         android:layout_width="0dip"
         android:layout_height="wrap_content"
         android:layout_weight="0.4"
-        android:textSize="@dimen/result_list_textsize" />
+        android:textSize="@dimen/result_list_textsize"
+        android:textStyle="bold"
+        android:text="@string/name" />
     <TextView
         android:id="@+id/time"
         android:layout_width="0dip"
         android:layout_height="wrap_content"
         android:layout_weight="0.2"
-        android:textSize="@dimen/result_list_textsize" />
+        android:textSize="@dimen/result_list_textsize"
+        android:textStyle="bold"
+        android:text="@string/time" />
     <TextView
         android:id="@+id/age"
         android:layout_width="0dip"
         android:layout_height="wrap_content"
         android:layout_weight="0.2"
-        android:textSize="@dimen/result_list_textsize" />
+        android:textSize="@dimen/result_list_textsize"
+        android:textStyle="bold"
+        android:text="@string/age" />
     <TextView
         android:id="@+id/ranking"
         android:layout_width="0dip"
         android:layout_height="wrap_content"
         android:layout_weight="0.2"
-        android:textSize="@dimen/result_list_textsize" />
+        android:textSize="@dimen/result_list_textsize"
+        android:textStyle="bold"
+        android:text="@string/ranking" />
 </LinearLayout>

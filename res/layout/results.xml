@@ -3,5 +3,6 @@
     android:id="@+id/results_list"
     android:name="com.kvest.race_results.ui.fragment.ResultsListFragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/result_list_margin" />
 
