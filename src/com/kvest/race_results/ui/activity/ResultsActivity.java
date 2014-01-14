@@ -58,6 +58,7 @@ public class ResultsActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
+        //add "settings" and "update" menu items
         MenuItemCompat.setShowAsAction(menu.add(0, SETTINGS_MENU_ID, 0, getString(R.string.settings))
                       .setIcon(R.drawable.settings), MenuItem.SHOW_AS_ACTION_IF_ROOM);
         MenuItemCompat.setShowAsAction(menu.add(0, REFRESH_MENU_ID, 0, getString(R.string.refresh))
@@ -83,7 +84,7 @@ public class ResultsActivity extends ActionBarActivity {
         //clear old results
         getContentResolver().delete(ResultsProviderMetadata.RESULTS_URI, null, null);
 
-        //load new race results
+        //"ask" service to load new race results
         Intent intent = new Intent(this, NetworkWorkerService.class);
         intent.putExtra(NetworkWorkerService.ACTION_CODE_EXTRA, NetworkWorkerService.LOAD_RESULTS_ACTION_CODE);
         intent.putExtra(NetworkWorkerService.DATA_FORMAT_EXTRA, SettingsPreferenceHelper.getLoadFormat(this));

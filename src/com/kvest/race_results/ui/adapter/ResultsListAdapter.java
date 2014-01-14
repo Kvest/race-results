@@ -30,6 +30,7 @@ public class ResultsListAdapter extends SimpleCursorAdapter implements SimpleCur
     @Override
     public boolean setViewValue(View view, Cursor cursor, int columnIndex) {
         if (view.getId() == R.id.root_container) {
+            //set background color depending on age group
             switch (cursor.getInt(columnIndex)) {
                 case AgeGroupHelper.FIRST_GROUP :
                     view.setBackgroundResource(R.color.first_group_bg_color);

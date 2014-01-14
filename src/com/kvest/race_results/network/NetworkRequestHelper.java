@@ -81,6 +81,7 @@ public class NetworkRequestHelper {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
+            //close reader
             if (reader != null) {
                 try {
                     reader.close();

@@ -35,7 +35,7 @@ public class XmlRaceResultsParser implements RaceResultsParser {
 
             parser.setInput(new StringReader(rawData));
 
-            //go to root tag
+            //go to the root tag
             parser.next();
             parser.require(XmlPullParser.START_TAG, "", RACE_TAG);
 
@@ -66,6 +66,7 @@ public class XmlRaceResultsParser implements RaceResultsParser {
             if (parser.getEventType() == XmlPullParser.START_TAG) {
                 parser.require(XmlPullParser.START_TAG, "", RUNNER_TAG);
 
+                //parse each runner and add to collection
                 result.Runners.add(parseRunner(parser));
             }
         }
@@ -125,7 +126,7 @@ public class XmlRaceResultsParser implements RaceResultsParser {
         try {
             result = Integer.parseInt(resultStr);
         } catch(Exception ex) {
-            result = 0;
+            result = -1;
         }
 
         //Go to next tag
