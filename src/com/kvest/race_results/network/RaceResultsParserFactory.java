@@ -11,6 +11,8 @@ public abstract class RaceResultsParserFactory {
     public static RaceResultsParser getParser(int format) {
         switch (format) {
             case NetworkRequestHelper.LOAD_FORMAT_JSON : return new JsonRaceResultsParser();
+            case NetworkRequestHelper.LOAD_FORMAT_XML : return new XmlRaceResultsParser();
+            case NetworkRequestHelper.LOAD_FORMAT_TXT : return new TxtRaceResultsParser();
         }
 
         return null;

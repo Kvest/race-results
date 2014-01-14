@@ -14,6 +14,12 @@ public class RunnerResult {
     public int Time;
     public int Age;
 
+    public RunnerResult() {
+        Name = "";
+        Time = -1;
+        Age = -1;
+    }
+
     public int getAgeGroup() {
         return AgeGroupHelper.ageToGroup(Age);
     }
