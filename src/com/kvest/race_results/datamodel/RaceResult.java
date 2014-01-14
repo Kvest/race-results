@@ -1,5 +1,6 @@
 package com.kvest.race_results.datamodel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,4 +13,9 @@ import java.util.List;
 public class RaceResult {
     public String Name;
     public List<RunnerResult> Runners;
+
+    public RaceResult() {
+        Name = "";
+        Runners = new ArrayList<RunnerResult>();
+    }
 }

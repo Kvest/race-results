@@ -32,7 +32,6 @@ public class XmlRaceResultsParser implements RaceResultsParser {
         try
         {
             RaceResult result = new RaceResult();
-            result.Runners = new ArrayList<RunnerResult>();
 
             parser.setInput(new StringReader(rawData));
 
